@@ -1,36 +1,30 @@
-CREATE DATABASE IF NOT EXISTS biblioteca;
+CREATE DATABASE IF NOT EXISTS ez1;
 
-USE biblioteca;
+USE ez1;
 
-CREATE TABLE autores (
-    id_autor    INTEGER         NOT NULL    AUTO_INCREMENT,
-    nombre      VARCHAR(128)    NOT NULL,
-    apellidos   VARCHAR(255)    NOT NULL,
-    PRIMARY KEY (id_autor)
+CREATE TABLE usuarios (
+    id    INTEGER         NOT NULL    AUTO_INCREMENT,
+    nombre      VARCHAR(50)    NOT NULL,
+    correo   VARCHAR(50)    NOT NULL,
+    PRIMARY KEY (id)
 );
 
-CREATE TABLE editoriales (
-    id_editorial    INTEGER             NOT NULL    AUTO_INCREMENT,
-    nombre          VARCHAR(255)        NOT NULL,
-    PRIMARY KEY     (id_editorial)
+CREATE TABLE ejercicios (
+    id    INTEGER             NOT NULL    AUTO_INCREMENT,
+    nombre          VARCHAR(50)        NOT NULL,
+    categoria          VARCHAR(50)        NOT NULL,
+    descripcion          VARCHAR(250),
+    PRIMARY KEY     (id)
 );
 
-CREATE TABLE temas (
-    id_tema         INTEGER             NOT NULL    AUTO_INCREMENT,
-    nombre          VARCHAR(255)        NOT NULL,
-    PRIMARY KEY     (id_tema)
+CREATE TABLE registros (
+    id                  INTEGER             NOT NULL    AUTO_INCREMENT,
+    fecha               DATE        NOT NULL,
+    ejercicios_id       INT        NOT NULL,
+    no_series           INT        NOT NULL,
+    reps                INT        NOT NULL,
+    peso                INT        NOT NULL,
+    notas               VARCHAR(250)        NOT NULL,   
+    PRIMARY KEY     (id)
+    FOREIGN KEY     (ejercicios_id)
 );
-
-CREATE TABLE libros (
-    id_libro        INTEGER             NOT NULL    AUTO_INCREMENT,
-    titulo          VARCHAR(255)        NOT NULL,
-    edicion         VARCHAR(32)         NOT NULL,
-    fk_id_autor     INTEGER             NOT NULL,
-    fk_id_editorial INTEGER             NOT NULL,
-    fk_id_tema      INTEGER             NOT NULL,
-    PRIMARY KEY     (id_libro),
-    FOREIGN KEY     (fk_id_autor)       REFERENCES autores(id_autor),
-    FOREIGN KEY     (fk_id_editorial)   REFERENCES editoriales(id_editorial),
-    FOREIGN KEY     (fk_id_tema)        REFERENCES temas(id_tema)
-);
-

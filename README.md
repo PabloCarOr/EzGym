@@ -1,6 +1,6 @@
 # API RESTful con Node.js
 
-Proyecto de demostración para clases de desarrollo de APIs utilizando Node.js,
+Proyecto de EzGym utilizando Node.js,
 con implementación en contenedores de Docker.
 
 ## Tabla de contenido
@@ -11,6 +11,7 @@ con implementación en contenedores de Docker.
   - [Instrucciones para la instalación](#instrucciones-para-la-instalación)
   - [Documentación detallada](#documentación-detallada)
   - [Enlaces externos](#enlaces-externos)
+  - [Breve explicación del proyecto](#breve-explicación-del-proyecto)
 
 ## Requisitos de instalación
 
@@ -55,3 +56,7 @@ consulta la [documentación detallada](./docs/README.md).
 
 - [Node.js](https://www.nodejs.org)
 - [Docker](https://www.docker.com)
+
+## Breve explicación del proyecto
+
+Esta aplicación está diseñada para proporcionar a los usuarios una experiencia integral de entrenamiento. Con una interfaz fácil de usar, la aplicación ofrece explicaciones detalladas de una variedad de ejercicios, permitiendo a los usuarios aprender y mejorar sus técnicas de entrenamiento.
