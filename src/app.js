@@ -8,7 +8,7 @@ const EjerciciosController = require('./controllers/EjerciciosController');
 // insertar = POST
 // actualizar = PATCH
 
-// reemplazar = PUT
+// reemplazar = PUT, no es necesario este
 
 app.use(express.json());
 
