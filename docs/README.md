@@ -7,10 +7,18 @@ de endpoints disponibles con enlaces a sus respectivas documentaciones detallada
 
 | Recurso                    | Descripción |
 | -------------------------- | ----------- |
-| `GET /temas`               | Recupera la lista de todos los temas disponibles. |
-| [`GET /temas/{id}`](./endpoints//get-temas-id.md)          | Obtiene información detallada sobre un tema específico. |
-| [`GET /temas/{id}/libros`](./endpoints/get-temas-id-libros.md)   | Obtiene la lista de libros asociados a un tema específico. |
-| `GET /libros`              | Recupera la lista de todos los libros disponibles. |
-| `GET /libros/{id}/autores` | Obtiene la lista de autores de un libro específico. |
-| `GET /autores`             | Recupera la lista de todos los autores disponibles. |
-| `GET /autores/{id}`        | Obtiene información detallada sobre un autor específico. |
+| `GET /usuarios`               | Recupera la lista de todos los usuarios disponibles. |
+| [`GET /usuarios/{id}`](./endpoints//get-usuarios-id.md)          | Obtiene información detallada sobre un usuario específico. |
+| `POST /usuarios`               | Recibe una petición para crear un recurso usuario. |
+| `PATCH /usuarios/{id}`               | Recibe una petición para actualizar parte de un recurso de usuarios. |
+
+
+| `GET /ejercicios`              | Recupera la lista de todos los ejercicios disponibles. |
+| `GET /ejercicios/{id}`        | Obtiene información detallada sobre un ejercicio específico. |
+| `POST /ejercicios`               | Recibe una petición para crear un recurso ejercicio. |
+| `PATCH /ejercicios/{id}`               | Recibe una petición para actualizar parte de un recurso de ejercicios. |
+
+| `GET /registros`             | Recupera la lista de todos los registros disponibles. |
+| `GET /registros/{id}`        | Obtiene información detallada sobre un registro específico. |
+| `POST /registros`               | Recibe una petición para crear un recurso registros. |
+| `PATCH /registros/{id}`               | Recibe una petición para actualizar parte de un recurso de registros. |

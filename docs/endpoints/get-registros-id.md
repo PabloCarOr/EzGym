@@ -1,20 +1,25 @@
-# Endpoint: `GET /temas/{id}`
+# Endpoint: `GET /registros/{id}`
 
-Permite obtener información detallada sobre un tema específico mediante su identificador único.
+Permite obtener información detallada sobre un registro específico mediante su identificador único.
 
 ## Parámetros de URL
-- `{id}` (obligatorio): Identificador único del tema que se desea recuperar.
+- `{id}` (obligatorio): Identificador único del registro que se desea recuperar.
 
 ## Ejemplo de Solicitud
 ```http
-GET /temas/123
+GET /registros/1
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 {
-  "id_tema": 123,
-  "nombre": "Programación",
+  "id": 1,
+  "fecha": "2023-12-05",
+  "ejercicios_id": 1,
+  "no_series": 3,
+  "reps": 12,
+  "peso": 120,
+  "notas": "buenas sensaciones"
 }
 ```
 
@@ -25,7 +30,7 @@ GET /temas/123
   {
     "errno": 404,
     "error": "not_found",
-    "error_description": "No se encontró el tema."
+    "error_description": "Not found."
   }
   ```
 
@@ -42,5 +47,3 @@ GET /temas/123
 
 - Asegurate de incluir un ID válido en la solicitud para obtener la información
   sobre un tema en específico.
-- Para consultar más detalle sobre los libros relacionados con el tema consultar
-  la documentación del endpoint [`/temas/{id}/libros`](./get-temas-id-libros.md).
